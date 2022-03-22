@@ -29,8 +29,7 @@ jobs:
           npm install
           npm run build
           cd dist
-          git config --local user.name="github action"
-          git config --local user.email=""
+          git config --local user.name "github action"
           git init
           git add -A
           git commit -m "build for production env"
