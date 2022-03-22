@@ -26,11 +26,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build vue
         run: |
+          set -x
           npm install
           npm run build
           cd dist
-          git config --local user.name "github action"
-          git config --local user.email "example@example.com"
+          git config --global user.name "github action"
+          git config --global user.email "example@example.com"
           git init
           git add -A
           git commit -m "build for production env"
