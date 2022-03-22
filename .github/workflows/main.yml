@@ -38,4 +38,4 @@ jobs:
           git remote add origin ${{ github.server_url }}/${{ github.repository }}
           git push -f origin master:gh-page
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
