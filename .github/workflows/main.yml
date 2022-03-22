@@ -29,10 +29,8 @@ jobs:
           set -x
           npm install
           npm run build
-          cd dist
           git config --global user.name "github action"
           git config --global user.email "example@example.com"
-          git init
           git add -A
           git commit -m "build for production env"
           git push origin master:gh-page
