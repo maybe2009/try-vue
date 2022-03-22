@@ -35,4 +35,5 @@ jobs:
           git config --local user.email "example@example.com"
           git add -A
           git commit -m "build for production env"
-          git push origin master:gh-page
+          git remote add origin ${{ github.repositoryUrl }}
+          git push -f origin master:gh-page
