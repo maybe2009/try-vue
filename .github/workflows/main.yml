@@ -26,6 +26,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build vue
         run: |
+          npm install
           npm run build
           cd dist
           git conifg --local user.name="github action"
